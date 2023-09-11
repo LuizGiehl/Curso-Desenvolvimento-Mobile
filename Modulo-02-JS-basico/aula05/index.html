@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="sla"></h1>
+    <h1 id="sla">Olá </h1>
+    <button onclick="entrar()">Acessar</button>
+    <h1 id="area"></h1>
 
 
 
@@ -17,10 +19,32 @@
 
 
     <script>
-        var nome = window.prompt('digite seu nome');
-        var sobrenome = window.prompt('digite seu sobrenome');
-        var nomeCompleto = `Olá ${nome} ${sobrenome}`
-        document.getElementById('sla').innerHTML += nomeCompleto
+        function entrar() {
+            var nome = window.prompt('digite seu nome');
+            var sobrenome = window.prompt('digite seu sobrenome');
+            var nomeCompleto = nome + " " + sobrenome;
+            var area = document.getElementById('area');
+
+            if(nomeCompleto === '' || nome === null) {
+                alert('Ocorreu algum erro')
+            }
+            else {
+            area.innerHTML += `Sejá bem vindo ${nomeCompleto}`;
+
+            let botaoSair = document.createElement("button")
+            botaoSair.innerText = "Sair da conta";
+            botaoSair.onclick = sair;
+
+            area.appendChild(botaoSair);
+            }
+
+            function sair() {
+                alert('Até mais')
+                area.innerHTML = 'Você saiu'
+                document.getElementById('sla').innerText = ''
+            }
+        }
+        
     </script>
 </body>
 </html>
