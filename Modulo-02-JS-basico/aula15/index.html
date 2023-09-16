@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Escolha um item</h1>
+    <ul>
+        <li>1 - Suco</li>
+        <li>2 - Agua</li>
+        <li>3 - Sorvete</li>
+        <li>4 - Chmar Garçom</li>
+    </ul>
+
+    <button onclick="pedir()">Pedir</button>
+
+
+
+
+
+
+
+
+    <script>
+        function pedir() {
+            var valor = prompt('Digite o valor de um dos itens')
+
+            switch(Number(valor)) {
+                case 1:
+                    alert('Me parece que você faz amor com o suco ?');
+                    break;
+                case 2:
+                    alert('Aqui sua agua');
+                    break;
+                case 3:
+                    alert('Tó seu sorvete');
+                    break;
+                case 4:
+                    alert('O meu nobre chega aí');
+                    break;
+                default:
+                    alert('Escolhe um número de 1 a 4 jamanta');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
