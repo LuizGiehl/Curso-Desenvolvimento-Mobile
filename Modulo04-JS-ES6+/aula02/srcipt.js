@@ -2,7 +2,7 @@ function novoUsuario(info) {
     let dados = {
         ...info,
         inicio: '10/02/2023',
-        cogigo: 123123,
+        codigo: 123123,
         status: "ativo",
     }
 
