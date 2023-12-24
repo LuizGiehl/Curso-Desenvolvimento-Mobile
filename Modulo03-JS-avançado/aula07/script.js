@@ -1,59 +1,17 @@
-let listElement = document.getElementById('lista')
-let inputElement = document.getElementById('tarefa')
-let buttonElement = document.getElementById('button')
+/*
+let nomes = ['luiz', 'antonio', 'isadora', 'gabriel'];
 
-let tarefas = JSON.parse(localStorage.getItem('@listaTarefas')) || []
+console.log(nomes.includes('luiz'))
 
-function renderTarefas(){
-    listElement.innerHTML = ''
-
-    tarefas.map((todo) => {
-        let liElement = document.createElement('li')
-        let tarefaText = document.createTextNode(todo)
-
-        let linkElement = document.createElement('a')
-        linkElement.setAttribute('href', '#')
-
-        let linkText = document.createTextNode('Excliur')
-        linkElement.appendChild(linkText)
-
-        let posicao = tarefas.indexOf(todo)
-        
-
-        linkElement.setAttribute('onclick', `deletarTarefa(${posicao})`)
-
-        liElement.appendChild(tarefaText)
-        liElement.appendChild(linkElement)
-        listElement.appendChild(liElement)
-    })
+if (nomes.includes('gabriel')) {
+    console.log('O nome está na lista')
+} else {
+    console.log('O nome não está na lista')
 }
+*/
 
-renderTarefas()
+var nome = 'matheus'
 
-function registerElement() {
-    if(inputElement.value === ""){
-        alert('Digite alguma tarefa')
-        return false
-    }
-    else{
-        let novaTarefa = inputElement.value
+console.log(nome.startsWith('mat'))
 
-        tarefas.push(novaTarefa)
-        inputElement.value = ''
-
-        renderTarefas()
-        salvarLocalStorage()
-    }
-}
-
-buttonElement.onclick = registerElement;
-
-function deletarTarefa(posicao){
-    tarefas.splice(posicao, 1)
-    renderTarefas()
-    salvarLocalStorage()
-}
-
-function salvarLocalStorage(){
-    localStorage.setItem('@listaTarefas', JSON.stringify(tarefas))
-}
+console.log(nome.endsWith('uiz'))
