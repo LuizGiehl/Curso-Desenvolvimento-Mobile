@@ -1,19 +1,37 @@
-import React, { useState} from 'react';
-import { View, Text, Button, StyleSheet} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet, TextInput} from 'react-native';
 
 
 function App() {
+  const [nome, setNome] = useState('');
+
+
   return(
-    <View style={{flex:1, backgroundColor: 'gray'}}>
+    <View style={styles.container}>
 
-      <View style={{height:65, backgroundColor: '#121212'}}>
-      </View>
-      <View style={{flex:1, backgroundColor: '#DDD'}}></View>
-      <View style={{height:65, backgroundColor: '#121212'}}></View>
-
+      <TextInput 
+        style={styles.input}
+      
+      />
 
     </View>
   );
+
+  const styles = StyleSheet.create({
+
+    container: {
+      flex:1
+    },
+    input: {
+      height: 45,
+      borderWidth: 1,
+      margin: 10,
+      padding: 10,
+      fontSize: 20,
+    }
+  })
+
+
 }
 
 
