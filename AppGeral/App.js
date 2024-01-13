@@ -1,10 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.box1}></View>
+        <View style={styles.box2}></View>
+        <View style={styles.box3}></View>
+        <View style={styles.box4}></View>
+        <View style={styles.box1}></View>
+      </ScrollView>
+
     </View>
   );
 }
@@ -12,8 +20,22 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+
+  box1:{
+    height: 250,
+    backgroundColor: 'red',
+  },
+  box2:{
+    height: 250,
+    backgroundColor: 'green',
+  },
+  box3:{
+    height: 250,
+    backgroundColor: 'yellow',
+  },
+  box4:{
+    height: 250,
+    backgroundColor: 'blue',
   },
 });
