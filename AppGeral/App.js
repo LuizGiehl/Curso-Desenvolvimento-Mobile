@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native';
+import Pessoa from './src/Pessoa'
 
 export default function App() {
 
@@ -8,7 +9,8 @@ const [feed, setFeed] = useState([
   {_id: '2', nome: 'José', idade: 20, email: 'jose@gmail.com'},
   {_id: '3', nome: 'Carlinhos', idade: 55, email: 'DalvaCavalo@gmail.com'},
   {_id: '4', nome: 'Antonio', idade: 17, email: 'vesgo@gmail.com'},
-  {_id: '5', nome: 'CalvãoBoeno', idade: 69, email: 'calvo@gmail.com'}
+  {_id: '5', nome: 'CalvãoBoeno', idade: 69, email: 'calvo@gmail.com'},
+  {_id: '6', nome: 'Alberto', idade: 79, email: 'alberto@gmail.com'}
 ]);
 
   return (
@@ -29,25 +31,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  areaPessoa: {
-    backgroundColor: '#121212',
-    height: 200,
-    marginBottom: 15,
-    justifyContent: 'center',
-  },
-  textPessoa: {
-    color: '#FFF',
-    fontSize: 20,
 
-  }
 })
-
-function Pessoa(props){
-  return(
-    <View style={styles.areaPessoa}>
-      <Text style={styles.textPessoa}> {props.data.nome} </Text>
-      <Text style={styles.textPessoa}> {props.data.idade} </Text>
-      <Text style={styles.textPessoa}> {props.data.email} </Text>
-    </View>
-  );
-}
